@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Pelajaran</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* Warna khusus header */
+        th {
+            background-color: blue;
+            color: white;
+        }
+
+        /* Warna khusus untuk kolom hari */
+        .hari {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        /* Warna khusus untuk mata pelajaran di akhir jam */
+        .highlight {
+            background-color: blue;
+            color: white;
+        }
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 600px) {
+            table {
+                font-size: 14px;
+            }
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Jadwal Pelajaran</h2>
+    <table>
+        <tr>
+            <th colspan="2">Hari</th>
+            <th>Jam</th>
+            <th>Mata Pelajaran</th>
+        </tr>
+        <tr>
+            <td class="hari" rowspan="2">Senin</td>
+            <td>08:00 - 09:30</td>
+            <td>Matematika</td>
+        </tr>
+        <tr>
+            <td>09:45 - 11:15</td>
+            <td>Sejarah</td>
+        </tr>
+        <tr>
+            <td class="hari" rowspan="3">Selasa</td>
+            <td>08:00 - 09:30</td>
+            <td>Bahasa Inggris</td>
+        </tr>
+        <tr>
+            <td>09:45 - 11:15</td>
+            <td>Fisika</td>
+        </tr>
+        <tr>
+            <td class="highlight">11:30 - 13:00</td>
+            <td class="highlight">Kimia</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
