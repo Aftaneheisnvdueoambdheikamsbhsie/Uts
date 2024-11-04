@@ -5,82 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Reservasi</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+        /* Reset dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f4f4f9;
-            padding: 20px;
-        }
+/* Styling body dan container utama */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
 
-        .container {
-            width: 100%;
-            max-width: 800px;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
+/* Header */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
 
-        .form-group {
-            text-align: center;
-            margin-top: 20px;
-        }
+/* Styling tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    overflow-x: auto;
+    display: block; /* Mengaktifkan scroll horizontal jika tabel lebih besar dari layar */
+    white-space: nowrap; /* Mencegah tabel memotong isi kolom */
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            font-size: 16px;
-            overflow-x: auto;
-            display: block;
-        }
+/* Style header dan sel */
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
 
-        th, td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
+th {
+    background-color: #4CAF50;
+    color: white;
+}
 
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
+/* Responsive styling */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; /* Mengurangi padding container di layar kecil */
+    }
 
-        /* Responsive design untuk layar kecil */
-        @media (max-width: 600px) {
-            table {
-                font-size: 14px;
-            }
-            th, td {
-                padding: 10px;
-                white-space: nowrap; /* Agar teks tidak memotong */
-            }
-            .container {
-                padding: 10px;
-            }
-        }
+    table {
+        font-size: 14px; /* Menyesuaikan font untuk layar kecil */
+    }
+    
+    th, td {
+        padding: 6px; /* Mengurangi padding untuk tampilan lebih ringkas */
+    }
+}
 
-        /* Tambahan gaya */
-        table {
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-        }
 
     </style>
 </head>
