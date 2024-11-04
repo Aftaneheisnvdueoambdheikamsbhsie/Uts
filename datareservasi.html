@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Reservasi</title>
     <style>
-        /* CSS untuk tabel data */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -24,7 +23,7 @@
 
         .container {
             width: 100%;
-            max-width: 600px;
+            max-width: 800px;
             background: white;
             padding: 20px;
             border-radius: 8px;
@@ -34,48 +33,24 @@
         h2 {
             text-align: center;
             margin-bottom: 20px;
+            color: #333;
         }
 
         .form-group {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .form-group input[type="button"] {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .form-group input[type="button"]:hover {
-            background-color: #45a049;
+            text-align: center;
+            margin-top: 20px;
         }
 
         table {
             width: 100%;
-            margin-top: 20px;
             border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 16px;
         }
 
-        table, th, td {
+        th, td {
+            padding: 12px;
             border: 1px solid #ddd;
-            padding: 8px;
             text-align: left;
         }
 
@@ -84,13 +59,47 @@
             color: white;
         }
 
+        /* Responsive untuk layar kecil */
         @media (max-width: 600px) {
-            .form-group {
-                flex-direction: column;
+            table, th, td {
+                display: block;
+                width: 100%;
+            }
+
+            table {
+                border: none;
+            }
+
+            th, td {
+                padding: 10px;
+                border: none;
+                text-align: right;
+                position: relative;
+            }
+
+            th::before, td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                font-weight: bold;
+                color: #333;
+            }
+
+            th, td:before {
+                text-align: left;
+            }
+
+            td {
+                padding-left: 50%;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            /* Adjust font size for better readability on small screens */
+            th, td {
+                font-size: 14px;
             }
         }
-    
-        /* ... */
     </style>
 </head>
 <body>
@@ -100,14 +109,14 @@
     <table id="dataReservasi">
         <thead>
             <tr>
-                <th>Nama</th>
-                <th>Nomor Telepon</th>
-                <th>Alamat</th>
-                <th>Check-in</th>
-                <th>Check-out</th>
-                <th>Jenis Kamar</th>
-                <th>Tamu Dewasa</th>
-                <th>Anak-anak</th>
+                <th data-label="Nama">Nama</th>
+                <th data-label="Nomor Telepon">Nomor Telepon</th>
+                <th data-label="Alamat">Alamat</th>
+                <th data-label="Check-in">Check-in</th>
+                <th data-label="Check-out">Check-out</th>
+                <th data-label="Jenis Kamar">Jenis Kamar</th>
+                <th data-label="Tamu Dewasa">Tamu Dewasa</th>
+                <th data-label="Anak-anak">Anak-anak</th>
             </tr>
         </thead>
         <tbody>
@@ -116,7 +125,7 @@
     </table>
 
     <div class="form-group">
-        <a href="index.html">Kembali ke Formulir Reservasi</a>
+        <a href="Soal1.html">Kembali ke Formulir Reservasi</a>
     </div>
 </div>
 
