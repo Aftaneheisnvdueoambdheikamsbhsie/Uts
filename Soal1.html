@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Reservasi Hotel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-group input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .form-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Formulir Reservasi Hotel</h2>
+    <form id="reservasiForm">
+        <div class="form-group">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+        </div>
+        <div class="form-group">
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="tel" id="telepon" name="telepon" required>
+        </div>
+        <div class="form-group">
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="checkin">Tanggal Check-in:</label>
+            <input type="date" id="checkin" name="checkin" required>
+        </div>
+        <div class="form-group">
+            <label for="checkout">Tanggal Check-out:</label>
+            <input type="date" id="checkout" name="checkout" required>
+        </div>
+        <div class="form-group">
+            <label for="jenis_kamar">Jenis Kamar:</label>
+            <select id="jenis_kamar" name="jenis_kamar" required>
+                <option value="Single">Single</option>
+                <option value="Double">Double</option>
+                <option value="Suite">Suite</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="tamu_dewasa">Jumlah Tamu Dewasa:</label>
+            <input type="number" id="tamu_dewasa" name="tamu_dewasa" min="1" required>
+        </div>
+        <div class="form-group">
+            <label for="anak">Jumlah Anak-anak:</label>
+            <input type="number" id="anak" name="anak" min="0">
+        </div>
+        <div class="form-group">
+            <input type="button" value="Reservasi" onclick="tambahReservasi()">
+        </div>
+    </form>
+
+    <h2>Data Reservasi</h2>
+    <table id="dataReservasi">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Nomor Telepon</th>
+                <th>Alamat</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th>Jenis Kamar</th>
+                <th>Tamu Dewasa</th>
+                <th>Anak-anak</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data reservasi akan ditambahkan di sini secara otomatis -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function tambahReservasi() {
+        // Ambil data dari form
+        const nama = document.getElementById('nama').value;
+        const telepon = document.getElementById('telepon').value;
+        const alamat = document.getElementById('alamat').value;
+        const checkin = document.getElementById('checkin').value;
+        const checkout = document.getElementById('checkout').value;
+        const jenisKamar = document.getElementById('jenis_kamar').value;
+        const tamuDewasa = document.getElementById('tamu_dewasa').value;
+        const anak = document.getElementById('anak').value || 0;
+
+        // Buat baris baru di tabel
+        const table = document.getElementById('dataReservasi').getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow();
+
+        // Tambahkan data ke dalam kolom
+        newRow.insertCell().textContent = nama;
+        newRow.insertCell().textContent = telepon;
+        newRow.insertCell().textContent = alamat;
+        newRow.insertCell().textContent = checkin;
+        newRow.insertCell().textContent = checkout;
+        newRow.insertCell().textContent = jenisKamar;
+        newRow.insertCell().textContent = tamuDewasa;
+        newRow.insertCell().textContent = anak;
+
+        // Reset form setelah data ditambahkan
+        document.getElementById('reservasiForm').reset();
+    }
+</script>
+
+</body>
+</html>
