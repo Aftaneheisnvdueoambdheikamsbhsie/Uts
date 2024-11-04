@@ -38,32 +38,36 @@
 
         table {
             width: 100%;
-            border-collapse: collapse;
-            font-size: 16px;
+            border-collapse: separate;
+            border-spacing: 4px;
             text-align: center;
+            font-size: 16px;
         }
 
         th, td {
-            padding: 10px;
-            border: 1px solid #ddd;
+            padding: 8px 12px;
+            border-radius: 8px;
         }
 
-        /* Warna khusus header */
         th {
-            background-color: blue;
+            background-color: #0000FF;
             color: white;
+            font-weight: bold;
         }
 
-        /* Warna khusus untuk kolom hari */
         .hari {
             background-color: yellow;
             font-weight: bold;
         }
 
-        /* Warna khusus untuk mata pelajaran di akhir jam */
         .highlight {
-            background-color: blue;
+            background-color: #0000FF;
             color: white;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            background-color: white;
         }
 
         /* Responsif untuk layar kecil */
@@ -72,7 +76,7 @@
                 font-size: 14px;
             }
             th, td {
-                padding: 8px;
+                padding: 6px 10px;
             }
         }
     </style>
@@ -83,9 +87,9 @@
     <h2>Jadwal Pelajaran</h2>
     <table>
         <tr>
-            <th colspan="2">Hari</th>
-            <th>Jam</th>
-            <th>Mata Pelajaran</th>
+            <th class="hari" colspan="2">Hari</th>
+            <th class="highlight">Jam</th>
+            <th class="highlight">Mata Pelajaran</th>
         </tr>
         <tr>
             <td class="hari" rowspan="2">Senin</td>
