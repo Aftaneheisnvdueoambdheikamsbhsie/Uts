@@ -46,6 +46,8 @@
             border-collapse: collapse;
             margin-top: 20px;
             font-size: 16px;
+            overflow-x: auto;
+            display: block;
         }
 
         th, td {
@@ -59,47 +61,27 @@
             color: white;
         }
 
-        /* Responsive untuk layar kecil */
+        /* Responsive design untuk layar kecil */
         @media (max-width: 600px) {
-            table, th, td {
-                display: block;
-                width: 100%;
-            }
-
             table {
-                border: none;
-            }
-
-            th, td {
-                padding: 10px;
-                border: none;
-                text-align: right;
-                position: relative;
-            }
-
-            th::before, td::before {
-                content: attr(data-label);
-                position: absolute;
-                left: 10px;
-                font-weight: bold;
-                color: #333;
-            }
-
-            th, td:before {
-                text-align: left;
-            }
-
-            td {
-                padding-left: 50%;
-                text-align: left;
-                border-bottom: 1px solid #ddd;
-            }
-
-            /* Adjust font size for better readability on small screens */
-            th, td {
                 font-size: 14px;
             }
+            th, td {
+                padding: 10px;
+                white-space: nowrap; /* Agar teks tidak memotong */
+            }
+            .container {
+                padding: 10px;
+            }
         }
+
+        /* Tambahan gaya */
+        table {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
     </style>
 </head>
 <body>
@@ -109,14 +91,14 @@
     <table id="dataReservasi">
         <thead>
             <tr>
-                <th data-label="Nama">Nama</th>
-                <th data-label="Nomor Telepon">Nomor Telepon</th>
-                <th data-label="Alamat">Alamat</th>
-                <th data-label="Check-in">Check-in</th>
-                <th data-label="Check-out">Check-out</th>
-                <th data-label="Jenis Kamar">Jenis Kamar</th>
-                <th data-label="Tamu Dewasa">Tamu Dewasa</th>
-                <th data-label="Anak-anak">Anak-anak</th>
+                <th>Nama</th>
+                <th>Nomor Telepon</th>
+                <th>Alamat</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th>Jenis Kamar</th>
+                <th>Tamu Dewasa</th>
+                <th>Anak-anak</th>
             </tr>
         </thead>
         <tbody>
