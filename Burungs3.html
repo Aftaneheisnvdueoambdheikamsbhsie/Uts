@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumpulan Suara Burung</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: #f7c1f1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: #333;
+        }
+
+        .header, .footer {
+            background-color: #d88ed0;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .footer {
+            font-size: 14px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .category {
+            width: 30%;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .category ul, .category ol {
+            list-style-position: inside;
+            padding-left: 0;
+            text-align: left;
+        }
+
+        .category ul li, .category ol li {
+            margin: 8px 0;
+        }
+
+        .category a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .category a:hover {
+            text-decoration: underline;
+        }
+
+        .display {
+            width: 30%;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .display img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">KUMPULAN SUARA BURUNG</div>
+    <div class="content">
+        <div class="category">
+            <h3>Burung Kicau</h3>
+            <ul>
+                <li><a href="#" onclick="displayBird('Murai Batu', 'murai.jpg', 'murai.mp3')">Murai Batu</a></li>
+                <li><a href="#" onclick="displayBird('Kenari', 'kenari.jpg', 'kenari.mp3')">Kenari</a></li>
+                <li><a href="#" onclick="displayBird('Cucak Rowo', 'cucakrowo.jpg', 'cucakrowo.mp3')">Cucak Rowo</a></li>
+            </ul>
+        </div>
+
+        <div class="display" id="birdDisplay">
+            <h3>Suara Burung</h3>
+            <img src="default.jpg" id="birdImage" alt="Burung">
+            <audio controls id="birdAudio">
+                <source src="default.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="category">
+            <h3>Burung Hias</h3>
+            <ol>
+                <li><a href="#" onclick="displayBird('Parkit', 'parkit.jpg', 'parkit.mp3')">Parkit</a></li>
+                <li><a href="#" onclick="displayBird('Merpati', 'merpati.jpg', 'merpati.mp3')">Merpati</a></li>
+                <li><a href="#" onclick="displayBird('Burung Puyuh', 'puyuh.jpg', 'puyuh.mp3')">Burung Puyuh</a></li>
+            </ol>
+        </div>
+    </div>
+    <div class="footer">Created by @NPM&Nama</div>
+</div>
+
+<script>
+    function displayBird(name, image, audio) {
+        document.getElementById('birdDisplay').querySelector('h3').innerText = 'Suara Burung ' + name;
+        document.getElementById('birdImage').src = image;
+        document.getElementById('birdAudio').querySelector('source').src = audio;
+        document.getElementById('birdAudio').load();
+    }
+</script>
+
+</body>
+</html>
