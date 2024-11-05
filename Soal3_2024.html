@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Resto Satu</title>
     <style>
-        * {
+        
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -18,55 +19,53 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #E0F7E9; /* Warna mint muda */
-    padding: 20px;
 }
 
 .container {
-    width: 100%;
+    width: 80%;
     max-width: 900px;
-    background: #FFF5E1; /* Warna beige atau cream */
+    background-color: #FFF5E1; /* Warna beige */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #D8BFD8; /* Warna lavender */
     text-align: center;
     color: #333;
 }
 
-.header, .footer {
+.header {
     background-color: #D8BFD8; /* Warna lavender */
     padding: 10px;
     font-weight: bold;
 }
 
 .footer {
+    background-color: #D8BFD8; /* Warna lavender */
+    padding: 10px;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .content {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
-    margin: 20px 0;
-    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .category, .display {
     width: 30%;
     background-color: #E6E6FA; /* Warna lavender muda */
-    border-radius: 8px;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 250px;
+    border: 1px solid #D8BFD8; /* Border sesuai dengan warna lavender */
+    text-align: left;
 }
 
 .category h3, .display h3 {
     margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
 }
 
 .category ul, .category ol {
-    list-style-position: inside;
-    padding-left: 0;
-    text-align: left;
+    padding-left: 15px;
 }
 
 .category ul li, .category ol li {
@@ -86,7 +85,6 @@ body {
     width: 100%;
     max-width: 150px;
     height: auto;
-    border-radius: 8px;
     margin-bottom: 10px;
 }
 
@@ -95,17 +93,6 @@ audio {
     margin-top: 10px;
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .category, .display {
-        width: 80%;
-    }
-}
 
 
     </style>
