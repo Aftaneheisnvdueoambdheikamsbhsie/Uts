@@ -43,12 +43,11 @@ body {
     font-size: 14px;
     font-weight: bold;
 }
-
 .content {
     display: flex;
     justify-content: space-between;
-    align-items: stretch; /* Pastikan elemen memiliki tinggi yang sama */
-    gap: 10px; /* Jarak antara elemen */
+    align-items: stretch; /* Menjaga agar elemen memiliki tinggi yang sama */
+    gap: 10px;
     margin-top: 20px;
 }
 
@@ -59,10 +58,24 @@ body {
     border: 1px solid #D8BFD8;
     text-align: left;
     box-sizing: border-box;
-    height: 100%; /* Tambahkan height agar elemen mengikuti tinggi elemen terbesar */
+    display: flex;
+    flex-direction: column; /* Mengatur agar konten di dalamnya tersusun secara vertikal */
+    height: 100%;
 }
 
+.display img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px; /* Menetapkan tinggi tetap untuk gambar agar tidak memanjang */
+    object-fit: cover; /* Mengatur gambar agar pas dalam batas tinggi yang ditentukan */
+    margin-bottom: 10px;
+}
 
+audio {
+    width: 100%;
+    margin-top: auto; /* Memastikan audio berada di bagian bawah jika ada ruang kosong */
+}
+        
 .category h3, .display h3 {
     margin-bottom: 10px;
     font-size: 18px;
@@ -84,18 +97,6 @@ body {
 
 .category a:hover {
     text-decoration: underline;
-}
-
-.display img {
-    width: 100%; /* Menggunakan lebar penuh */
-    max-width: 300px; /* Ukuran maksimum gambar */
-    height: auto;
-    margin-bottom: 10px;
-}
-
-audio {
-    width: 100%;
-    margin-top: 10px;
 }
 
     </style>
