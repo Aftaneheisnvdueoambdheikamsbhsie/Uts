@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTAURANT MENU RESTO SATU</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+
+        .header, .footer {
+            background-color: #f2c894;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .menu-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #d3a869;
+        }
+
+        .menu-section {
+            width: 30%;
+        }
+
+        h3 {
+            color: #6d4c41;
+        }
+
+        ul, ol {
+            list-style-position: inside;
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        a {
+            color: #6d4c41;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border: 2px solid #d3a869;
+        }
+
+        audio {
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">MENU RESTO SATU</div>
+
+<div class="menu-container">
+    <div class="menu-section">
+        <h3>MAKANAN</h3>
+        <ul>
+            <li><a href="#">BAKSO</a></li>
+            <li><a href="#">SATE</a></li>
+            <li><a href="#">AYAM BAKAR</a></li>
+        </ul>
+    </div>
+
+    <div class="menu-section">
+        <h3>MENU SATE</h3>
+        <div class="image-container">
+            <img src="sate.jpg" alt="Gambar Sate">
+        </div>
+        <audio controls>
+            <source src="audio_bakso.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="menu-section">
+        <h3>MINUMAN</h3>
+        <ol>
+            <li><a href="#">TEH MANIS</a></li>
+            <li><a href="#">JUS BUAH</a></li>
+            <li><a href="#">ES CAMPUR</a></li>
+            <li><a href="#">AIR MINERAL</a></li>
+        </ol>
+    </div>
+</div>
+
+<div class="footer">Created by @NPM&Nama</div>
+
+</body>
+</html>
