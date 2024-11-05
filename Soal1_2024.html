@@ -45,17 +45,15 @@
             text-align: center;
         }
         .form-group {
-            display: flex;
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            gap: 10px;
             align-items: center;
             margin-bottom: 15px;
         }
         .form-group label {
-            width: 130px;
             color: #333;
             text-align: left;
-            margin-right: 10px;
-            display: flex;
-            justify-content: space-between;
         }
         .form-group input[type="text"], 
         .form-group input[type="email"], 
@@ -63,14 +61,14 @@
         .form-group input[type="date"], 
         .form-group select, 
         .form-group textarea {
-            flex: 1;
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            width: 100%;
         }
-        .form-group .radio-group {
+        .radio-group {
             display: flex;
-            gap: 10px; /* Mengurangi jarak antar radio button */
+            gap: 10px;
             align-items: center;
         }
         .button {
@@ -82,7 +80,7 @@
             cursor: pointer;
             border-radius: 4px;
             display: block;
-            margin: 20px auto; /* Menempatkan tombol di tengah */
+            margin: 20px auto;
         }
         .button:hover {
             background-color: #45a049;
