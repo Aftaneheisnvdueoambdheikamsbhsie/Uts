@@ -18,16 +18,19 @@
             font-weight: bold;
         }
         .header {
-            background-color: #d0e4f5;
+            background-color: #c3b8ff; /* Warna ungu untuk bagian "Jadwal" */
         }
         .nama-siswa {
-            background-color: #fddde6;
+            background-color: #fddde6; /* Warna pink untuk "Nama Siswa" */
         }
         .mata-pelajaran {
-            background-color: #d6f5d6;
+            background-color: #d6f5d6; /* Warna hijau muda untuk "Mata Pelajaran" */
         }
-        .jadwal-hari, .jadwal-jam {
-            background-color: #fef5d6;
+        .jadwal-hari {
+            background-color: #d0e4f5; /* Warna biru muda untuk "Hari" */
+        }
+        .jadwal-jam {
+            background-color: #fef5d6; /* Warna kuning untuk "Jam" */
         }
     </style>
 </head>
@@ -36,12 +39,11 @@
 <h2 style="text-align: center;">Jadwal Mata Pelajaran Siswa</h2>
 <table>
     <tr>
-        <th class="header nama-siswa" rowspan="2">Nama Siswa</th>
-        <th class="header mata-pelajaran" colspan="2">Mata Pelajaran</th>
-        <th class="header jadwal-hari" colspan="2">Jadwal</th>
+        <th class="nama-siswa" rowspan="2">Nama Siswa</th>
+        <th class="mata-pelajaran" rowspan="2">Mata Pelajaran</th>
+        <th class="header" colspan="2">Jadwal</th>
     </tr>
     <tr>
-        <th class="mata-pelajaran">Mata Pelajaran</th>
         <th class="jadwal-hari">Hari</th>
         <th class="jadwal-jam">Jam</th>
     </tr>
