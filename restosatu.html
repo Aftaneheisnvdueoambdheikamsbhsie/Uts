@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Resto Satu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f1e5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #fef6e4;
+        }
+        .header {
+            font-weight: bold;
+            padding: 10px;
+            background-color: #deb887;
+            color: black;
+        }
+        .menu-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+        .menu-section div {
+            width: 30%;
+        }
+        .menu-section h3 {
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .menu-section ul, .menu-section ol {
+            list-style: none;
+            padding: 0;
+        }
+        .menu-section ul li, .menu-section ol li {
+            padding: 5px 0;
+        }
+        .menu-section a {
+            color: #6d1d6d;
+            text-decoration: none;
+        }
+        .menu-section a:hover {
+            text-decoration: underline;
+        }
+        .audio-player {
+            margin-top: 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">MENU RESTO SATU</div>
+
+        <div class="menu-section">
+            <!-- Bagian Makanan -->
+            <div>
+                <h3>MAKANAN</h3>
+                <ul>
+                    <li><a href="#">Bakso</a></li>
+                    <li><a href="#">Sate</a></li>
+                    <li><a href="#">Ayam Bakar</a></li>
+                </ul>
+            </div>
+
+            <!-- Bagian Menu Utama (dengan gambar dan audio) -->
+            <div>
+                <h3>MENU SATE</h3>
+                <img src="gambar-bakso.jpg" alt="Bakso" width="200">
+                <div class="audio-player">
+                    <audio controls>
+                        <source src="suara-bakso.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+
+            <!-- Bagian Minuman -->
+            <div>
+                <h3>MINUMAN</h3>
+                <ol>
+                    <li><a href="#">Teh Manis</a></li>
+                    <li><a href="#">Jus Buah</a></li>
+                    <li><a href="#">Es Campur</a></li>
+                    <li><a href="#">Air Mineral</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="footer">Created by @NPM&Nama</div>
+    </div>
+</body>
+</html>
